@@ -1,31 +1,31 @@
-input_grid_map_topic: "input_grid_map" # topic of subscription for input grid maps
+input_grid_map_topic: "/elevation_mapping/elevation_map_raw" # topic of subscription for input grid maps
 occ_grid_map_topic: "occ_grid_map" # topic of publication of occluded grid maps
 rec_grid_map_topic: "rec_grid_map" # topic of publication of reconstructed grid maps
 comp_grid_map_topic: "comp_grid_map" # topic of publication of composed grid maps
 all_grid_map_topic: "all_grid_map" # topic of publication for GridMap messages with all layers
 
-inpaint_method: 1 # Navier-Stokes, Telea or NN
-input_layer: "occ_grid_map" # in which layer of the GridMap object is the occluded DEM stored
+inpaint_method: 2 # Navier-Stokes, Telea or NN
+input_layer: "elevation" # in which layer of the GridMap object is the occluded DEM stored
 
 resizing: {
   resize: false,
-  target_resolution: 0.04
+  target_resolution: 0.1
 }
 
 # OpenCV parameters
-inpaint_radius: 0.12
+inpaint_radius: 1.0
 
 # neural network parameters
-neural_network_path: "models/gonzen_traced.pt" # relative to package root
-use_gpu: false
+neural_network_path: "models/tenerife_traced.pt" # relative to package root
+use_gpu: true
 NaN_replacement: 0.0
 
-subgrids: {
-  divide_into_subgrids: false,
-  subgrid_rows: -1,
-  subgrid_cols: -1,
-  subgrid_max_occ_ratio_thresh: 1.
-}
+# subgrids: {
+#   divide_into_subgrids: true,
+#   subgrid_rows: 64,
+#   subgrid_cols: 64,
+#   subgrid_max_occ_ratio_thresh: 0.85
+# }
 
 # visualization
 visualize_with_open_cv: false

@@ -1,4 +1,4 @@
-input_grid_map_topic: "/elevation_mapping/elevation_map_recordable" # topic of subscription for input grid maps
+input_grid_map_topic: "/elevation_mapping/raw" # topic of subscription for input grid maps
 occ_grid_map_topic: "occ_grid_map" # topic of publication of occluded grid maps
 rec_grid_map_topic: "rec_grid_map" # topic of publication of reconstructed grid maps
 comp_grid_map_topic: "comp_grid_map" # topic of publication of composed grid maps
