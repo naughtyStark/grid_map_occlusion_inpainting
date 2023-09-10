@@ -77,7 +77,7 @@ void OcclusionInpaintingNode::configure() {
 
 void OcclusionInpaintingNode::sub_callback(const grid_map_msgs::GridMap & inputGridMapMsg) 
 {
-  ROS_INFO("Received occluded GridMap message");
+  // ROS_INFO("Received occluded GridMap message");
 
   // load occluded grip map
   grid_map::GridMap inputGridMap;
