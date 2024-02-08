@@ -2,7 +2,7 @@
 
 
 ## Installation
-Create catkin workspace directory at `~/catkin_ws` and clone repository into `~/catkin_ws/src`.
+Create catkin workspace directory at `~/catkin_ws` and clone repository into `~/catkin_ws/src`
 
 ### Install Dependencies
 ```bash
